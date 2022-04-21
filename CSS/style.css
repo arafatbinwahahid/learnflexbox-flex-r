@@ -1,0 +1,194 @@
+:root {
+  /* For Media Querry! */
+  /* Not Changble Line (1-20) */
+  --MarginNone: 0px 0px 0px 0px;
+  --PaddingNone: 0px 0px 0px 0px;
+  --ContantBoxColor: #ffccff;
+  /* Header Box Shadow */
+  --BoxShadowForHeader: 0px 3px 3px -1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.75);
+  /* Outer Contant Box Shadow */
+  --BoxShadowForContant: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  /* Deeper Of Contant Box Shadow */
+  --BoxShadowForContant-Deep: 0px 0px 10px -1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.75);
+  /* == */
+
+  /* Deeper Of Contant (Box) */
+  --BorderOfContant-Deep: 0.3vh solid white;
+  --BorderRadius-Deep: 2vh;
+  --HeightOfContant-Deep: 5vh;
+  --weidghtOfContant-deep: 20vw;
+  --PaddingIn: 2vh 5vw 2vh 5vw;
+  --GapOfContant-Deeper: 2vh;
+  --DeeperFontSize: 3vh;
+  /* Outer Of Contant (Box Out) */
+  --BorderOfContant: 0.5vh solid white;
+  --BorderRadius: 4vh;
+  --PaddiingOut: 2vh 5vw 0vh 5vw;
+  /* Header section (Upper) */
+  --PaddingForHeader: 1vh 5vw 1vh 5vw;
+  --ImageSizeHeader: 4vh;
+  --HeaderDisplayGap: 2vh;
+  --HeaderFontSize: 3.3vh;
+  /* For Contant Section (Writing) */
+  --PaddingForContant: 2vh 5vw 0vh 5vw;
+  --ContanDisplayGap: 3vh;
+  /* For all Image */
+  --ThreeDotIconHeader: 3vh;
+  --AppleThreeDotCross: 5vh;
+  /* For Font */
+  --HeaOneFontSize: 6vh;
+  --HeaTwoFontSize: 5vh;
+  --ParaFontSize: 4vh;
+}
+* {
+  padding: var(--PaddingNone);
+  margin: var(--MarginNone);
+}
+body {
+  font-family: sans-serif;
+  height: 1000vh;
+}
+h1 {
+  font-size: var(--HeaOneFontSize);
+}
+h2 {
+  font-size: var(--HeaTwoFontSize);
+}
+p {
+  font-size: var(--ParaFontSize);
+}
+ul li {
+  list-style: none;
+}
+[class^="HeaderContainer"] {
+  box-shadow: var(--BoxShadowForHeader);
+  font-size: var(--HeaderFontSize);
+  background-color: var(--ContantBoxColor);
+  padding: var(--PaddingForHeader);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+img[src="./SVG/flex'r logo header.svg"] {
+  height: var(--ImageSizeHeader);
+}
+img[src="./SVG/github icon header.svg"] {
+  height: var(--ImageSizeHeader);
+}
+img[src="./SVG/3dot icon header.svg"] {
+  height: var(--ThreeDotIconHeader);
+}
+.HeaderContainerOne :first-child {
+  display: flex;
+  flex-direction: row;
+  gap: var(--HeaderDisplayGap);
+  align-items: center;
+  justify-content: center;
+}
+.HeaderContainerOne :last-child {
+  display: flex;
+  flex-direction: row;
+  gap: var(--HeaderDisplayGap);
+  align-items: center;
+  justify-content: center;
+}
+.SectionOne {
+  padding: var(--PaddingForContant);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ContanDisplayGap);
+}
+.SectionTwo {
+  border: var(--BorderOfContant);
+  border-radius: var(--BorderRadius);
+  box-shadow: var(--BoxShadowForContant);
+  background-color: var(--ContantBoxColor);
+  padding: var(--PaddingIn);
+  display: flex;
+  flex-direction: column;
+  gap: var(--ContanDisplayGap);
+}
+.SectionTwoForPadding {
+  padding: var(--PaddiingOut);
+}
+img[src="./svg/apple display cross icon three.svg"] {
+  height: var(--AppleThreeDotCross);
+}
+[class^="SectionTwoPart-"] {
+  display: flex;
+  justify-content: space-between;
+}
+.SectionTwoPart-Two ul li {
+  font-size: var(--DeeperFontSize);
+  height: var(--HeightOfContant-Deep);
+  width: var(--weidghtOfContant-deep);
+  border: var(--BorderOfContant-Deep);
+  border-radius: var(--BorderRadius-Deep);
+  box-shadow: var(--BoxShadowForContant-Deep);
+  background-color: var(--ContantBoxColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+[class^="SectionTwoPTwo-00"] {
+  display: flex;
+  flex-direction: column;
+  gap: var(--GapOfContant-Deeper);
+}
+/* Media Qureey */
+/* iPhone X and Xs Max */
+@media only screen and (min-device-width: 375px) and (min-device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+  :root {
+    /* Deeper Of Contant (Box) */
+    --BorderOfContant-Deep: 0.3vh solid white;
+    --BorderRadius-Deep: 2vh;
+    --HeightOfContant-Deep: 5vh;
+    --weidghtOfContant-deep: 20vw;
+    --PaddingIn: 2vh 5vw 2vh 5vw;
+    --GapOfContant-Deeper: 2vh;
+    --DeeperFontSize: 3vh;
+    /* Outer Of Contant (Box Out) */
+    --BorderOfContant: 0.5vh solid white;
+    --BorderRadius: 3vh;
+    --PaddiingOut: 2vh 5vw 0vh 5vw;
+    /* Header section (Upper) */
+    --PaddingForHeader: 1vh 5vw 1vh 5vw;
+    --ImageSizeHeader: 3vh;
+    --HeaderDisplayGap: 1.5vh;
+    --HeaderFontSize: 2vh;
+    /* For Contant Section (Writing) */
+    --PaddingForContant: 2vh 5vw 0vh 5vw;
+    --ContanDisplayGap: 1.5vh;
+    /* For all Image */
+    --ThreeDotIconHeader: 1.5vh;
+    --AppleThreeDotCross: 4vh;
+    /* For Font */
+    --HeaOneFontSize: 4vh;
+    --HeaTwoFontSize: 3vh;
+    --ParaFontSize: 2vh;
+  }
+  .SectionTwoPart-One {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .SectionTwoPart-Two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5vh;
+  }
+  .SectionTwoPart-Two ul li {
+    width: 35vh;
+  }
+  /* Complited */
+}
