@@ -21,10 +21,10 @@
   /* Deeper Of Contant (Box) */
   --BorderOfContant-Deep: 0.3vh solid white;
   --BorderRadius-Deep: 2vh;
-  --HeightOfContant-Deep: 5vh;
-  --weidghtOfContant-deep: 20vw;
+  --HeightOfContant-Deep: 1.5625rem;
+  --weidghtOfContant-deep: 15.625rem;
   --PaddingIn: 2vh 5vw 2vh 5vw;
-  --GapOfContant-Deeper: 2vh;
+  --GapOfContant-Deeper: 1.5vh;
   --DeeperFontSize: 3vh;
   /* Outer Of Contant (Box Out) */
   --BorderOfContant: 0.5vh solid white;
@@ -36,11 +36,11 @@
   --HeaderDisplayGap: 2vh;
   --HeaderFontSize: 3.3vh;
   /* For Contant Section (Writing) */
-  --PaddingForContant: 2vh 5vw 0vh 5vw;
+  --PaddingForContant: 2vh 5vw 2vh 5vw;
   --ContanDisplayGap: 3vh;
   /* For all Image */
   --ThreeDotIconHeader: 3vh;
-  --AppleThreeDotCross: 5vh;
+  --AppleThreeDotCross: 4vh;
   /* For Font */
   --HeaOneFontSize: 6vh;
   --HeaTwoFontSize: 5vh;
@@ -116,17 +116,18 @@ img[src="./SVG/3dot icon header.svg"] {
   flex-direction: column;
   gap: var(--ContanDisplayGap);
 }
-.SectionTwoForPadding {
-  padding: var(--PaddiingOut);
-}
-img[src="./svg/apple display cross icon three.svg"] {
-  height: var(--AppleThreeDotCross);
-}
-[class^="SectionTwoPart-"] {
+.SectionTwoPart-One {
   display: flex;
   justify-content: space-between;
 }
-.SectionTwoPart-Two ul li {
+.SectionTwoPart-Two {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--GapOfContant-Deeper);
+}
+.SectionTwo ul li {
   font-size: var(--DeeperFontSize);
   height: var(--HeightOfContant-Deep);
   width: var(--weidghtOfContant-deep);
@@ -137,58 +138,14 @@ img[src="./svg/apple display cross icon three.svg"] {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-grow: 1;
 }
-[class^="SectionTwoPTwo-00"] {
-  display: flex;
-  flex-direction: column;
-  gap: var(--GapOfContant-Deeper);
+.SectionTwo p {
+  font-size: var(--DeeperFontSize);
 }
-/* Media Qureey */
-/* iPhone X and Xs Max */
-@media only screen and (min-device-width: 375px) and (min-device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
-  :root {
-    /* Deeper Of Contant (Box) */
-    --BorderOfContant-Deep: 0.3vh solid white;
-    --BorderRadius-Deep: 2vh;
-    --HeightOfContant-Deep: 5vh;
-    --weidghtOfContant-deep: 20vw;
-    --PaddingIn: 2vh 5vw 2vh 5vw;
-    --GapOfContant-Deeper: 2vh;
-    --DeeperFontSize: 3vh;
-    /* Outer Of Contant (Box Out) */
-    --BorderOfContant: 0.5vh solid white;
-    --BorderRadius: 3vh;
-    --PaddiingOut: 2vh 5vw 0vh 5vw;
-    /* Header section (Upper) */
-    --PaddingForHeader: 1vh 5vw 1vh 5vw;
-    --ImageSizeHeader: 3vh;
-    --HeaderDisplayGap: 1.5vh;
-    --HeaderFontSize: 2vh;
-    /* For Contant Section (Writing) */
-    --PaddingForContant: 2vh 5vw 0vh 5vw;
-    --ContanDisplayGap: 1.5vh;
-    /* For all Image */
-    --ThreeDotIconHeader: 1.5vh;
-    --AppleThreeDotCross: 2vh;
-    /* For Font */
-    --HeaOneFontSize: 4vh;
-    --HeaTwoFontSize: 3vh;
-    --ParaFontSize: 2vh;
-  }
-  .SectionTwoPart-One {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .SectionTwoPart-Two {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2.5vh;
-  }
-  .SectionTwoPart-Two ul li {
-    width: 35vh;
-  }
-  /* Complited */
+.SectionTwoForPadding {
+  padding: var(--PaddiingOut);
+}
+img[src="./SVG/apple display cross icon three.svg"] {
+  height: var(--AppleThreeDotCross);
 }
