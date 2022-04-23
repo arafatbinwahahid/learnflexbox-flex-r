@@ -1,54 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 :root {
   /* For Media Querry! */
   /* Not Changble Line (1-20) */
-  --MarginNone: 0px 0px 0px 0px;
-  --PaddingNone: 0px 0px 0px 0px;
-  --ContantBoxColor: #ffccff;
+  --AllNone-Margin: 0px 0px 0px 0px;
+  --AllNone-Padding: 0px 0px 0px 0px;
+  --AllUniversal-Color: #bee9e5;
   /* Header Box Shadow */
-  --BoxShadowForHeader: 0px 3px 3px -1px rgba(0, 0, 0, 0.75);
+  --Header-BoxShadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.75);
   /* Outer Contant Box Shadow */
-  --BoxShadowForContant: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  --OuterContantBox-BoxShadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   /* Deeper Of Contant Box Shadow */
-  --BoxShadowForContant-Deep: 0px 0px 10px -1px rgba(0, 0, 0, 0.75);
+  --DeepContantBox-BoxShadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.75);
   /* == */
 
   /* Deeper Of Contant (Box) */
-  --BorderOfContant-Deep: 0.3vh solid white;
-  --BorderRadius-Deep: 2vh;
-  --HeightOfContant-Deep: 6vh;
-  --weidghtOfContant-deep: 250px;
-  --PaddingIn: 2vh 5vw 2vh 5vw;
-  --GapOfContant-Deeper: 1.5vh;
-  --DeeperFontSize: 3vh;
+  --DeepContant-FontSize: clamp(0.4rem, 5vw, 1.5rem);
+  --DeepContant-Border: 0.3vh solid white;
+  --DeepContant-BorderRadius: 2vh;
+  --DeepContant-Height: 6vh;
+  --DeepContant-Width: 250px;
+  --DeepContant-Padding: 2vh 5vw 2vh 5vw;
+  --DeepContant-Gap: 1.5vh;
+  --DeepContant-FontSize: clamp(1rem, 3vw, 1.8rem);
   /* Outer Of Contant (Box Out) */
-  --BorderOfContant: 0.5vh solid white;
-  --BorderRadius: 4vh;
-  --PaddiingOut: 2vh 5vw 0vh 5vw;
+  --ContantOut-Border: 0.5vh solid white;
+  --ContantOut-BorderRadius: 4vh;
+  --ContantOut-PaddiingOut: 2vh 5vw 0vh 5vw;
   /* Header section (Upper) */
-  --PaddingForHeader: 1vh 5vw 1vh 5vw;
-  --ImageSizeHeader: calc(100vw / 40);
-  --HeaderDisplayGap: 1vw;
-  --HeaderFontSize: calc(100vw / 40);
+  --Header-Padding: 1vh 5vw 1vh 5vw;
+  --Header-Gap: 1vw;
+  --Header-FontSize: clamp(0.7rem, 3vw, 1.3rem);
   /* For Contant Section (Writing) */
-  --PaddingForContant: 2vh 5vw 2vh 5vw;
-  --ContanDisplayGap: 3vh;
+  --Contant-Padding: 2vh 5vw 2vh 5vw;
+  --Contant-Gap: 2vh;
   /* For all Image */
-  --ThreeDotIconHeader: 3vh;
-  --AppleThreeDotCross: 4vh;
+  --HeaderImage-Heightwidth: clamp(2vh, 3vw, 3.7vh);
+  --ThreeDotHeaderImage-Heightwidth: clamp(2vh, 3vw, 3.7vh);
+  --AppleThreeDotCrossImage-Heightwidth: clamp(3vh, 3.5vw, 4vh);
   /* For Font */
-  --HeaOneFontSize: 2.5rem;
-  --HeaTwoFontSize: 2rem;
-  --ParaFontSize: 1.5rem;
+  --HeaOne-FontSize: clamp(1.5rem, 4vw, 2.5rem);
+  --HeaTwo-FontSize: clamp(1rem, 3vw, 2rem);
+  --Para-FontSize: clamp(0.8rem, 2vw, 1.5rem);
 }
 * {
-  padding: var(--PaddingNone);
-  margin: var(--MarginNone);
+  padding: var(--AllNone-Padding);
+  margin: var(--AllNone-Margin);
 }
 body {
   font-family: sans-serif;
@@ -56,47 +58,47 @@ body {
   font-size: calc(100% / 2);
 }
 h1 {
-  font-size: var(--HeaOneFontSize);
+  font-size: var(--HeaOne-FontSize);
 }
 h2 {
-  font-size: var(--HeaTwoFontSize);
+  font-size: var(--HeaTwo-FontSize);
 }
 p {
-  font-size: var(--ParaFontSize);
+  font-size: var(--Para-FontSize);
 }
 ul li {
   list-style: none;
 }
 [class^="HeaderContainer"] {
-  box-shadow: var(--BoxShadowForHeader);
-  font-size: var(--HeaderFontSize);
-  background-color: var(--ContantBoxColor);
-  padding: var(--PaddingForHeader);
+  box-shadow: var(--Header-BoxShadow);
+  font-size: var(--Header-FontSize);
+  background-color: var(--AllUniversal-Color);
+  padding: var(--Header-Padding);
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 img[src="./SVG/flex'r logo header.svg"] {
-  height: var(--ImageSizeHeader);
+  height: var(--HeaderImage-Heightwidth);
 }
 img[src="./SVG/github icon header.svg"] {
-  height: var(--ImageSizeHeader);
+  height: var(--HeaderImage-Heightwidth);
 }
 img[src="./SVG/3dot icon header.svg"] {
-  height: 2vh;
+  height: var(--ThreeDotHeaderImage-Heightwidth);
 }
 .HeaderContainerOne :first-child {
   display: flex;
   flex-direction: row;
-  gap: var(--HeaderDisplayGap);
+  gap: var(--Header-Gap);
   align-items: center;
   justify-content: center;
 }
 .HeaderContainerOne :last-child {
   display: flex;
   flex-direction: row;
-  gap: var(--HeaderDisplayGap);
+  gap: var(--Header-Gap);
   align-items: center;
   justify-content: center;
 }
@@ -104,68 +106,72 @@ header section a {
   color: #000;
   text-decoration: none;
 }
-/* [class^="ButtonHeader"] {
-  font-size: 15px;
-  height: 4vh;
-  width: 15vw;
-  border: var(--BorderOfContant-Deep);
-  background-color: var(--ContantBoxColor);
+[class^="ButtonHeader"] {
+  background-color: var(--AllUniversal-Color);
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 .ButtonHeaderOne {
-  border-top-right-radius: 2vh;
-  border-bottom-right-radius: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
 }
 .ButtonHeaderTwo {
-  border-top-left-radius: 2vh;
-  border-bottom-left-radius: 2vh;
-} */
+  font-size: var(--Header-FontSize);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
 .SectionOne {
-  padding: var(--PaddingForContant);
+  padding: var(--Contant-Padding);
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: var(--ContanDisplayGap);
+  gap: var(--Contant-Gap);
 }
 .SectionTwo {
-  border: var(--BorderOfContant);
-  border-radius: var(--BorderRadius);
-  box-shadow: var(--BoxShadowForContant);
-  background-color: var(--ContantBoxColor);
-  padding: var(--PaddingIn);
+  border: var(--ContantOut-Border);
+  border-radius: var(--ContantOut-BorderRadius);
+  box-shadow: var(--OuterContantBox-BoxShadow);
+  background-color: var(--AllUniversal-Color);
+  padding: var(--DeepContant-Padding);
   display: flex;
   flex-direction: column;
-  gap: var(--ContanDisplayGap);
+  gap: var(--Contant-Gap);
 }
 .SectionTwoPart-One {
   display: flex;
   justify-content: space-between;
+}
+#SectionTwoPart-One-Font {
+  font-size: var(--DeepContant-FontSize);
 }
 .SectionTwoPart-Two {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: var(--GapOfContant-Deeper);
+  gap: var(--DeepContant-Gap);
 }
 .SectionTwo ul li {
-  font-size: var(--DeeperFontSize);
-  height: var(--HeightOfContant-Deep);
-  width: var(--weidghtOfContant-deep);
-  border: var(--BorderOfContant-Deep);
-  border-radius: var(--BorderRadius-Deep);
-  box-shadow: var(--BoxShadowForContant-Deep);
-  background-color: var(--ContantBoxColor);
+  font-family: "Ubuntu", sans-serif;
+  font-size: var(--DeepContant-FontSize);
+  height: var(--DeepContant-Height);
+  width: var(--DeepContant-Width);
+  border: var(--DeepContant-Border);
+  border-radius: var(--DeepContant-BorderRadius);
+  box-shadow: var(--DeepContantBox-BoxShadow);
+  background-color: var(--AllUniversal-Color);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-grow: 1;
 }
-.SectionTwo p {
-  font-size: var(--DeeperFontSize);
-}
 .SectionTwoForPadding {
-  padding: var(--PaddiingOut);
+  padding: var(--ContantOut-PaddiingOut);
 }
 img[src="./SVG/apple display cross icon three.svg"] {
-  height: var(--AppleThreeDotCross);
+  height: var(--AppleThreeDotCrossImage-Heightwidth);
 }
