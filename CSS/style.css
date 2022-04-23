@@ -106,6 +106,10 @@ header section a {
   color: #000;
   text-decoration: none;
 }
+header {
+  position: fixed;
+  width: 100vw;
+}
 [class^="ButtonHeader"] {
   background-color: var(--AllUniversal-Color);
   border: none;
@@ -125,7 +129,7 @@ header section a {
   justify-content: end;
 }
 .SectionOne {
-  padding: var(--Contant-Padding);
+  padding: 15vh 5vw 2vh 5vw;
   text-align: center;
   display: flex;
   flex-direction: column;
