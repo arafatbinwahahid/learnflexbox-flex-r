@@ -32,9 +32,9 @@
   --PaddiingOut: 2vh 5vw 0vh 5vw;
   /* Header section (Upper) */
   --PaddingForHeader: 1vh 5vw 1vh 5vw;
-  --ImageSizeHeader: 3vw;
-  --HeaderDisplayGap: 2vh;
-  --HeaderFontSize: 3vw;
+  --ImageSizeHeader: calc(100vw / 40);
+  --HeaderDisplayGap: 1vw;
+  --HeaderFontSize: calc(100vw / 40);
   /* For Contant Section (Writing) */
   --PaddingForContant: 2vh 5vw 2vh 5vw;
   --ContanDisplayGap: 3vh;
@@ -53,6 +53,7 @@
 body {
   font-family: sans-serif;
   height: 1000vh;
+  font-size: calc(100% / 2);
 }
 h1 {
   font-size: var(--HeaOneFontSize);
@@ -103,7 +104,7 @@ header section a {
   color: #000;
   text-decoration: none;
 }
-[class^="ButtonHeader"] {
+/* [class^="ButtonHeader"] {
   font-size: 15px;
   height: 4vh;
   width: 15vw;
@@ -117,7 +118,7 @@ header section a {
 .ButtonHeaderTwo {
   border-top-left-radius: 2vh;
   border-bottom-left-radius: 2vh;
-}
+} */
 .SectionOne {
   padding: var(--PaddingForContant);
   text-align: center;
