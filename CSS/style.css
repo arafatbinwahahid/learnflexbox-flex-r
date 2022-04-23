@@ -32,9 +32,9 @@
   --PaddiingOut: 2vh 5vw 0vh 5vw;
   /* Header section (Upper) */
   --PaddingForHeader: 1vh 5vw 1vh 5vw;
-  --ImageSizeHeader: 4vh;
+  --ImageSizeHeader: 3vw;
   --HeaderDisplayGap: 2vh;
-  --HeaderFontSize: 3.3vh;
+  --HeaderFontSize: 3vw;
   /* For Contant Section (Writing) */
   --PaddingForContant: 2vh 5vw 2vh 5vw;
   --ContanDisplayGap: 3vh;
@@ -89,7 +89,7 @@ img[src="./SVG/3dot icon header.svg"] {
   display: flex;
   flex-direction: row;
   gap: var(--HeaderDisplayGap);
-  align-items: center; 
+  align-items: center;
   justify-content: center;
 }
 .HeaderContainerOne :last-child {
