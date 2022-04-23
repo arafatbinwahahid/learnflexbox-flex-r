@@ -22,7 +22,7 @@
   --BorderOfContant-Deep: 0.3vh solid white;
   --BorderRadius-Deep: 2vh;
   --HeightOfContant-Deep: 6vh;
-  --weidghtOfContant-deep: 15.625rem;
+  --weidghtOfContant-deep: 250px;
   --PaddingIn: 2vh 5vw 2vh 5vw;
   --GapOfContant-Deeper: 1.5vh;
   --DeeperFontSize: 3vh;
@@ -42,9 +42,9 @@
   --ThreeDotIconHeader: 3vh;
   --AppleThreeDotCross: 4vh;
   /* For Font */
-  --HeaOneFontSize: 6vh;
-  --HeaTwoFontSize: 5vh;
-  --ParaFontSize: 4vh;
+  --HeaOneFontSize: 2.5rem;
+  --HeaTwoFontSize: 2rem;
+  --ParaFontSize: 1.5rem;
 }
 * {
   padding: var(--PaddingNone);
@@ -83,13 +83,13 @@ img[src="./SVG/github icon header.svg"] {
   height: var(--ImageSizeHeader);
 }
 img[src="./SVG/3dot icon header.svg"] {
-  height: var(--ThreeDotIconHeader);
+  height: 2vh;
 }
 .HeaderContainerOne :first-child {
   display: flex;
   flex-direction: row;
   gap: var(--HeaderDisplayGap);
-  align-items: center;
+  align-items: center; 
   justify-content: center;
 }
 .HeaderContainerOne :last-child {
@@ -98,6 +98,25 @@ img[src="./SVG/3dot icon header.svg"] {
   gap: var(--HeaderDisplayGap);
   align-items: center;
   justify-content: center;
+}
+header section a {
+  color: #000;
+  text-decoration: none;
+}
+[class^="ButtonHeader"] {
+  font-size: 15px;
+  height: 4vh;
+  width: 15vw;
+  border: var(--BorderOfContant-Deep);
+  background-color: var(--ContantBoxColor);
+}
+.ButtonHeaderOne {
+  border-top-right-radius: 2vh;
+  border-bottom-right-radius: 2vh;
+}
+.ButtonHeaderTwo {
+  border-top-left-radius: 2vh;
+  border-bottom-left-radius: 2vh;
 }
 .SectionOne {
   padding: var(--PaddingForContant);
