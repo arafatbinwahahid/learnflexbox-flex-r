@@ -33,11 +33,11 @@
   --ContantOut-BorderRadius: 4vh;
   --ContantOut-PaddiingOut: 2vh 5vw 0vh 5vw;
   /* Header section (Upper) */
-  --Header-Padding: 1vh 5vw 1vh 5vw;
+  --Header-Padding: 1vh 6vw 1vh 5vw;
   --Header-Gap: 1vw;
   --Header-FontSize: clamp(0.7rem, 3vw, 1.3rem);
   /* For Contant Section (Writing) */
-  --Contant-Padding: 2vh 5vw 2vh 5vw;
+  --Contant-Padding: 95px 5vw 2vh 5vw;
   --Contant-Gap: 2vh;
   /* For all Image */
   --HeaderImage-Heightwidth: clamp(2vh, 3vw, 3.7vh);
@@ -69,6 +69,10 @@ p {
 ul li {
   list-style: none;
 }
+header {
+  width: 100vw;
+  position: fixed;
+}
 [class^="HeaderContainer"] {
   box-shadow: var(--Header-BoxShadow);
   font-size: var(--Header-FontSize);
@@ -88,6 +92,9 @@ img[src="./SVG/github icon header.svg"] {
 img[src="./SVG/3dot icon header.svg"] {
   height: var(--ThreeDotHeaderImage-Heightwidth);
 }
+img[src="./SVG/apple display cross icon three.svg"] {
+  height: var(--AppleThreeDotCrossImage-Heightwidth);
+}
 .HeaderContainerOne :first-child {
   display: flex;
   flex-direction: row;
@@ -106,30 +113,49 @@ header section a {
   color: #000;
   text-decoration: none;
 }
-header {
-  position: fixed;
-  width: 100vw;
+.HeaderContainerTwo {
+  position: relative;
 }
-[class^="ButtonHeader"] {
-  background-color: var(--AllUniversal-Color);
-  border: none;
-  text-align: center;
-  text-decoration: none;
+/*  */
+.dropdown {
+  position: relative;
   display: inline-block;
 }
-.ButtonHeaderOne {
+.dropdown-content a {
+  height: var(--DeepContant-Height);
+  width: var(--DeepContant-Width);
+  border: var(--DeepContant-Border);
+  border-radius: var(--DeepContant-BorderRadius);
+  box-shadow: var(--DeepContantBox-BoxShadow);
+  background-color: var(--AllUniversal-Color);
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
+  flex-grow: 1;
 }
-.ButtonHeaderTwo {
-  font-size: var(--Header-FontSize);
+.dropdown-content {
+  width: 90vw;
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+  box-shadow: var(--Header-BoxShadow);
+  display: block;
+  margin-left: -5vw;
+  background-color: var(--AllUniversal-Color);
+  padding: 2vh 5vw 2vh 5vw;
+  position: absolute;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  justify-content: end;
+  gap: 2vw;
 }
 .SectionOne {
-  padding: 15vh 5vw 2vh 5vw;
+  padding: var(--Contant-Padding);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -175,7 +201,4 @@ header {
 }
 .SectionTwoForPadding {
   padding: var(--ContantOut-PaddiingOut);
-}
-img[src="./SVG/apple display cross icon three.svg"] {
-  height: var(--AppleThreeDotCrossImage-Heightwidth);
 }
