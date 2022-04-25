@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 :root {
   /* For Media Querry! */
   /* Not Changble Line (1-20) */
@@ -20,24 +19,24 @@
   /* == */
 
   /* Deeper Of Contant (Box) */
-  --DeepContant-FontSize: clamp(0.4rem, 5vw, 1.5rem);
-  --DeepContant-Border: 0.3vh solid white;
+  --DeepContant-FontSize: clamp(0.7rem, 3vw, 1.3rem);
+  --DeepContant-Border: 0.3vh solid rgb(0, 0, 0);
   --DeepContant-BorderRadius: 2vh;
-  --DeepContant-Height: 6vh;
-  --DeepContant-Width: 250px;
+  --DeepContant-Height: 7vh;
+  --DeepContant-Width: 37vw;
   --DeepContant-Padding: 2vh 5vw 2vh 5vw;
-  --DeepContant-Gap: 1.5vh;
+  --DeepContant-Gap: 1vh;
   --DeepContant-FontSize: clamp(1rem, 3vw, 1.8rem);
   /* Outer Of Contant (Box Out) */
-  --ContantOut-Border: 0.5vh solid white;
+  --ContantOut-Border: 0.3vh solid rgb(0, 0, 0);
   --ContantOut-BorderRadius: 4vh;
-  --ContantOut-PaddiingOut: 2vh 5vw 0vh 5vw;
+  --ContantOut-PaddiingOut: 2vh 5vw 2vh 5vw;
   /* Header section (Upper) */
-  --Header-Padding: 1vh 6vw 1vh 5vw;
+  --Header-Padding: 1vh 5vw 1vh 5vw;
   --Header-Gap: 1vw;
   --Header-FontSize: clamp(0.7rem, 3vw, 1.3rem);
   /* For Contant Section (Writing) */
-  --Contant-Padding: 95px 5vw 2vh 5vw;
+  --Contant-Padding: 2vh 5vw 2vh 5vw;
   --Contant-Gap: 2vh;
   /* For all Image */
   --HeaderImage-Heightwidth: clamp(2vh, 3vw, 3.7vh);
@@ -66,12 +65,9 @@ h2 {
 p {
   font-size: var(--Para-FontSize);
 }
-ul li {
-  list-style: none;
-}
-header {
-  width: 100vw;
-  position: fixed;
+body header {
+  position: sticky;
+  top: 0px;
 }
 [class^="HeaderContainer"] {
   box-shadow: var(--Header-BoxShadow);
@@ -114,46 +110,69 @@ header section a {
   text-decoration: none;
 }
 .HeaderContainerTwo {
-  position: relative;
+  display: flex;
+  flex-direction: row;
 }
 /*  */
-.dropdown {
-  position: relative;
-  display: inline-block;
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 15vh;
+  left: 0;
+  background-color: var(--AllUniversal-Color);
+  overflow-x: hidden;
+  transition: 0.5s;
 }
-.dropdown-content a {
-  height: var(--DeepContant-Height);
-  width: var(--DeepContant-Width);
-  border: var(--DeepContant-Border);
+.overlay-content {
+  position: relative;
+  top: 10%;
+  /* width: 100%; */
+  /* margin-top: 30px; */
+  text-align: center;
+  /*  */
+  padding: var(--Header-Padding);
+}
+.overlay-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1vh;
+}
+.overlay-content a {
+  height: 5.5vh;
+  width: 15vw;
+  border: 0.3vh solid rgb(0, 0, 0);
   border-radius: var(--DeepContant-BorderRadius);
-  box-shadow: var(--DeepContantBox-BoxShadow);
   background-color: var(--AllUniversal-Color);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-grow: 1;
 }
-.dropdown-content {
-  width: 90vw;
-  display: none;
-  position: absolute;
-  z-index: 1;
-}
-.dropdown:hover .dropdown-content {
+.overlay a {
+  padding: var(--Header-Padding);
+  text-decoration: none;
+  color: #000000;
   display: block;
-  box-shadow: var(--Header-BoxShadow);
-  display: block;
-  margin-left: -5vw;
-  background-color: var(--AllUniversal-Color);
-  padding: 2vh 5vw 2vh 5vw;
-  position: absolute;
+  transition: 0.3s;
+  /*  */
+  font-size: clamp(0.7rem, 3vw, 1.3rem);
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  gap: 2vw;
+  justify-content: center;
 }
+.overlay a:hover,
+.overlay a:focus {
+  color: #0e4134;
+  box-shadow: var(--DeepContantBox-BoxShadow);
+}
+.overlay .closebtn {
+  position: absolute;
+  font-size: clamp(3rem, 5vw, 7rem);
+}
+/*  */
 .SectionOne {
   padding: var(--Contant-Padding);
   text-align: center;
@@ -164,7 +183,7 @@ header section a {
 .SectionTwo {
   border: var(--ContantOut-Border);
   border-radius: var(--ContantOut-BorderRadius);
-  box-shadow: var(--OuterContantBox-BoxShadow);
+  /* box-shadow: var(--OuterContantBox-BoxShadow); */
   background-color: var(--AllUniversal-Color);
   padding: var(--DeepContant-Padding);
   display: flex;
@@ -176,7 +195,7 @@ header section a {
   justify-content: space-between;
 }
 #SectionTwoPart-One-Font {
-  font-size: var(--DeepContant-FontSize);
+  font-size: (0.7rem, 3vw, 1.3rem);
 }
 .SectionTwoPart-Two {
   display: flex;
@@ -185,19 +204,24 @@ header section a {
   justify-content: space-between;
   gap: var(--DeepContant-Gap);
 }
-.SectionTwo ul li {
-  font-family: "Ubuntu", sans-serif;
+.SectionTwoPart-Two a {
   font-size: var(--DeepContant-FontSize);
   height: var(--DeepContant-Height);
   width: var(--DeepContant-Width);
   border: var(--DeepContant-Border);
   border-radius: var(--DeepContant-BorderRadius);
-  box-shadow: var(--DeepContantBox-BoxShadow);
   background-color: var(--AllUniversal-Color);
+  color: #000;
+  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-grow: 1;
+}
+.SectionTwoPart-Two a:hover,
+.SectionTwoPart-Two a:focus {
+  color: #0e4134;
+  box-shadow: var(--DeepContantBox-BoxShadow);
 }
 .SectionTwoForPadding {
   padding: var(--ContantOut-PaddiingOut);

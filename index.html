@@ -26,16 +26,11 @@
         /></a>
       </section>
       <section class="HeaderContainerTwo">
-        <div class="dropdown">
-          <span>
-            <a href=""
-              ><img
-                class="test"
-                src="./SVG/3dot icon header.svg"
-                alt="3Dot Icon Svg By FLEX-R"
-            /></a>
-          </span>
-          <div class="dropdown-content">
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+          <div class="overlay-content">
             <a href="">Display</a>
             <a href="">Flex-direction</a><a href="">Flex-warp</a
             ><a href="">Flex-flow</a><a href="">Justify-contant</a
@@ -44,11 +39,13 @@
             ><a href="">Flex-grow</a><a href="">Flex-shink</a
             ><a href="">Flex-basic</a><a href="">Flex</a
             ><a href="">Layout Picker</a><a href="">Layout Example</a
-            ><a href="">Exarcise</a><a href="">Learn Othear</a
-            ><a href="">Align-contant</a><a href="">Order</a
-            ><a href="">About</a>
+            ><a href="">Exarcise</a><a href="">Learn Other</a
+            ><a href="">Practice</a><a href="">Exam</a><a href="">About</a>
           </div>
         </div>
+        <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
+          >&#9776;
+        </span>
         <a href="">LAN-ENG</a>
       </section>
     </header>
@@ -67,24 +64,31 @@
           <img src="./SVG/apple display cross icon three.svg" alt="" />
           <p id="SectionTwoPart-One-Font">flexbox All Properties</p>
         </section>
-        <section>
-          <ul class="SectionTwoPart-Two">
-            <li>Display</li>
-            <li>Flex-direction</li>
-            <li>Flex-warp</li>
-            <li>Flex-flow</li>
-            <li>Justify-contant</li>
-            <li>Align-contant</li>
-            <li>Order</li>
-            <li>Align-item</li>
-            <li>Align-self</li>
-            <li>Flex-grow</li>
-            <li>Flex-shink</li>
-            <li>Flex-basic</li>
-            <li>Flex</li>
-          </ul>
+        <section class="SectionTwoPart-Two">
+          <a href="">Display</a>
+          <a href="">Flex-direction</a>
+          <a href="">Flex-warp</a>
+          <a href="">Flex-flow</a>
+          <a href="">Justify-contant</a>
+          <a href="">Align-contant</a>
+          <a href="">Order</a>
+          <a href="">Align-item</a>
+          <a href="">Align-self</a>
+          <a href="">Flex-grow</a>
+          <a href="">Flex-shink</a>
+          <a href="">Flex-basic</a>
+          <a href="">Flex</a>
         </section>
       </div>
     </div>
+    <script>
+      function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+      }
+
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+      }
+    </script>
   </body>
 </html>
