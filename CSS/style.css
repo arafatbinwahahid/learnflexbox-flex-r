@@ -112,6 +112,9 @@ header section a {
 .HeaderContainerTwo {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 5vw 0px 5vw;
 }
 /*  */
 .overlay {
