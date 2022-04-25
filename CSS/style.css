@@ -93,6 +93,9 @@ img[src="./SVG/3dot icon header.svg"] {
 img[src="./SVG/apple display cross icon three.svg"] {
   height: var(--AppleThreeDotCrossImage-Heightwidth);
 }
+img[src="./SVG/Flexbox Architecture.svg"] {
+  height: 20%;
+}
 .HeaderContainerOne :first-child {
   display: flex;
   flex-direction: row;
