@@ -1,24 +1,23 @@
 :root {
-  /* For Media Querry! */
-  /* Not Changble Line (1-20) */
+  /* Not Changble Line (1-15) */
   --AllNone-Margin: 0px 0px 0px 0px;
   --AllNone-Padding: 0px 0px 0px 0px;
   --AllUniversal-Color: #bee9e5;
   /* Header Box Shadow */
-  --Header-BoxShadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.75);
+  --HeaderMain-BoxShadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.75);
-  /* Outer Contant Box Shadow */
-  --OuterContantBox-BoxShadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-  /* Deeper Of Contant Box Shadow */
-  --DeepContantBox-BoxShadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.75);
-  /* == */
+  /* Hover Mouse */
+  --HoverMouse-BoxShadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.75);
 
   /* Deeper Of Contant (Box) */
+  --DeepContantDeepOutput-Width: 34vw;
+  --DeepContantDeepHtwo-height: 5vh;
+  --DeepContantDeepHtwo-Width: 22vw;
+  --DeepContantDeep-gap: 5vw;
+  --DeepContantDeep-Padding: 1vh 1vw 1vh 1vw;
   --DeepContant-FontSize: clamp(0.7rem, 3vw, 1.3rem);
   --DeepContant-Border: 0.3vh solid rgb(0, 0, 0);
   --DeepContant-BorderRadius: 2vh;
@@ -32,6 +31,9 @@
   --ContantOut-BorderRadius: 4vh;
   --ContantOut-PaddiingOut: 2vh 5vw 2vh 5vw;
   /* Header section (Upper) */
+  --HeaderCross-ImageSize: clamp(3rem, 5vw, 7rem);
+  --Header-BorderRadius: 2vh;
+  --Header-Border: 0.3vh solid rgb(0, 0, 0);
   --Header-Padding: 1vh 5vw 1vh 5vw;
   --Header-Gap: 1vw;
   --Header-FontSize: clamp(0.7rem, 3vw, 1.3rem);
@@ -47,6 +49,9 @@
   --HeaTwo-FontSize: clamp(1rem, 3vw, 2rem);
   --Para-FontSize: clamp(0.8rem, 2vw, 1.5rem);
 }
+/*  */
+/*  Universal Section */
+/*  */
 * {
   padding: var(--AllNone-Padding);
   margin: var(--AllNone-Margin);
@@ -54,8 +59,6 @@
 }
 body {
   font-family: sans-serif;
-  height: 1000vh;
-  font-size: calc(100% / 2);
 }
 h1 {
   font-size: var(--HeaOne-FontSize);
@@ -66,21 +69,12 @@ h2 {
 p {
   font-size: var(--Para-FontSize);
 }
-body header {
-  position: sticky;
-  top: 0px;
+.MainPadding {
+  padding: var(--ContantOut-PaddiingOut);
 }
-[class^="HeaderContainer"] {
-  box-shadow: var(--Header-BoxShadow);
-  text-align: center;
-  font-size: var(--Header-FontSize);
-  background-color: var(--AllUniversal-Color);
-  padding: var(--Header-Padding);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
+/*  */
+/*  Image Section */
+/*  */
 img[src="./SVG/flex'r logo header.svg"] {
   height: var(--HeaderImage-Heightwidth);
 }
@@ -92,6 +86,24 @@ img[src="./SVG/3dot icon header.svg"] {
 }
 img[src="./SVG/apple display cross icon three.svg"] {
   height: var(--AppleThreeDotCrossImage-Heightwidth);
+}
+/*  */
+/*  Header Section */
+/*  */
+body header {
+  position: sticky;
+  top: 0px;
+}
+[class^="HeaderContainer"] {
+  box-shadow: var(--HeaderMain-BoxShadow);
+  text-align: center;
+  font-size: var(--Header-FontSize);
+  background-color: var(--AllUniversal-Color);
+  padding: var(--Header-Padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .HeaderContainerOne :first-child {
   display: flex;
@@ -112,14 +124,6 @@ header section a {
   color: #000;
   text-decoration: none;
 }
-.HeaderContainerTwo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0px 5vw 0px 5vw;
-}
-/*  */
 .overlay {
   height: 100%;
   width: 0;
@@ -134,10 +138,7 @@ header section a {
 .overlay-content {
   position: relative;
   top: 10%;
-  /* width: 100%; */
-  /* margin-top: 30px; */
   text-align: center;
-  /*  */
   padding: var(--Header-Padding);
 }
 .overlay-content {
@@ -150,8 +151,8 @@ header section a {
   text-align: center;
   height: 5.5vh;
   width: 15vw;
-  border: 0.3vh solid rgb(0, 0, 0);
-  border-radius: var(--DeepContant-BorderRadius);
+  border: var(--Header-Border);
+  border-radius: var(--Header-BorderRadius);
   background-color: var(--AllUniversal-Color);
   display: flex;
   align-items: center;
@@ -165,8 +166,7 @@ header section a {
   color: #000000;
   display: block;
   transition: 0.3s;
-  /*  */
-  font-size: clamp(0.7rem, 3vw, 1.3rem);
+  font-size: var(--Header-FontSize);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -174,46 +174,57 @@ header section a {
 .overlay a:hover,
 .overlay a:focus {
   color: #0e4134;
-  box-shadow: var(--DeepContantBox-BoxShadow);
+  box-shadow: var(--HoverMouse-BoxShadow);
 }
 .overlay .closebtn {
   position: absolute;
-  font-size: clamp(3rem, 5vw, 7rem);
+  font-size: var(--HeaderCross-ImageSize);
 }
 /*  */
-.SectionOne {
+/*  Contant Template */
+/*  */
+.ContantTemplate {
   padding: var(--Contant-Padding);
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: var(--Contant-Gap);
 }
-.SectionTwo {
-  border: var(--ContantOut-Border);
+/*  */
+/*  Contant Header Template */
+/*  */
+.ContantHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#ContantHeaderFont {
+  text-align: center;
+  font-size: var(--DeepContant-FontSize);
+}
+/*  */
+/*  Vitora thik tak Template */
+/*  */
+.DeepContantManagOuter {
+  border: var(--DeepContant-Border);
   border-radius: var(--ContantOut-BorderRadius);
   background-color: var(--AllUniversal-Color);
   padding: var(--DeepContant-Padding);
   display: flex;
   flex-direction: column;
-  gap: var(--Contant-Gap);
+  gap: var(--DeepContant-Gap);
 }
-.SectionTwoPart-One {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-#SectionTwoPart-One-Font {
-  text-align: center;
-  font-size: (0.7rem, 3vw, 1.3rem);
-}
-.SectionTwoPart-Two {
+/*  */
+/*  Flexbox All Properties Template */
+/*  */
+.FlexAllProper-Listing {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: var(--DeepContant-Gap);
 }
-.SectionTwoPart-Two a {
+.FlexAllProper-Listing a {
   text-align: center;
   font-size: var(--DeepContant-FontSize);
   height: var(--DeepContant-Height);
@@ -228,21 +239,17 @@ header section a {
   justify-content: center;
   flex-grow: 1;
 }
-.SectionTwoPart-Two a:hover,
-.SectionTwoPart-Two a:focus {
+.FlexAllProper-Listing a:hover,
+.FlexAllProper-Listing a:focus {
   color: #0e4134;
-  box-shadow: var(--DeepContantBox-BoxShadow);
+  box-shadow: var(--HoverMouse-BoxShadow);
 }
-.SectionTwoForPadding {
-  padding: var(--ContantOut-PaddiingOut);
-}
-/* Download Icon */
-.DownloadOutPadding {
-  padding: var(--ContantOut-PaddiingOut);
-}
+/*  */
+/*  Downloaad Icon Template */
+/*  */
 .DownloadIcon a {
   text-align: center;
-  font-size: var(--DeepContant-FontSize);
+  font-size: var(--Header-FontSize);
   height: var(--DeepContant-Height);
   border: var(--DeepContant-Border);
   border-radius: var(--DeepContant-BorderRadius);
@@ -253,23 +260,26 @@ header section a {
   align-items: center;
   justify-content: center;
 }
-.SectionsixForPadding {
-  padding: 1vh 1vw 1vh 1vw;
+/*  */
+/*  Deep Contant Template */
+/*  */
+.DeepDeepPadding {
+  padding: var(--DeepContantDeep-Padding);
   display: flex;
 }
-.Sectionsix {
+.DeepDeepContant {
   border: var(--DeepContant-Border);
   border-radius: var(--DeepContant-BorderRadius);
 }
-.Sectionsix div {
+.DeepDeepContant div {
   display: flex;
-  gap: 5vw;
+  gap: var(--DeepContantDeep-gap);
   align-items: center;
 }
-.Sectionsix h2 {
+.DeepDeepContant h2 {
   text-align: center;
   height: var(--DeepContant-Height);
-  width: 22vw;
+  width: var(--DeepContantDeepHtwo-Width);
   font-size: var(--Header-FontSize);
   border: var(--DeepContant-Border);
   border-radius: var(--DeepContant-BorderRadius);
@@ -281,22 +291,22 @@ header section a {
   justify-content: center;
   flex-grow: 1;
 }
-.Sectionsix-MainTwo {
+.DeepDeepContant-Slide {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: var(--DeepContant-Gap);
 }
-.SectionSix-ProVal {
+.DeepDeepHeader {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.SectionSix-ProVal h2 {
+.DeepDeepHeader h2 {
   text-align: center;
-  height: 5vh;
-  width: 20vw;
+  height: var(--DeepContantDeepHtwo-height);
+  width: var(--DeepContantDeepHtwo-Width);
   font-size: var(--Header-FontSize);
   border: var(--DeepContant-Border);
   border-radius: var(--DeepContant-BorderRadius);
@@ -304,62 +314,52 @@ header section a {
   align-items: center;
   justify-content: center;
 }
-.Sectionseven {
-  padding: var(--ContantOut-PaddiingOut);
-}
-.OutpuMain {
-  border: var(--ContantOut-Border);
-  border-radius: var(--ContantOut-BorderRadius);
+/*  */
+/*  Output View Template */
+/*  */
+.DeepDeepHeader-SingleLine {
+  border: var(--DeepContant-Border);
+  border-radius: var(--DeepContant-BorderRadius);
   background-color: var(--AllUniversal-Color);
-  padding: 2vh 5vw 2vh 5vw;
-  display: flex;
-  flex-direction: column;
-  gap: 1vh;
 }
 .OutputParant {
-  border: var(--ContantOut-Border);
-  border-radius: var(--ContantOut-BorderRadius);
+  border: var(--DeepContant-Border);
+  border-radius: var(--DeepContant-BorderRadius);
   background-color: var(--AllUniversal-Color);
-  padding: 1vh 1vw 1vh 1vw;
+  padding: var(--DeepContantDeep-Padding);
   display: flex;
   flex-wrap: wrap;
   gap: 1vh;
 }
 .OutputChildern {
-  width: 34vw;
-  border: var(--ContantOut-Border);
-  border-radius: var(--ContantOut-BorderRadius);
+  width: var(--DeepContantDeepOutput-Width);
+  border: var(--DeepContant-Border);
+  border-radius: var(--DeepContant-BorderRadius);
   background-color: var(--AllUniversal-Color);
   padding: 1vh 1.5vw 1vh 1vw;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
-.OutputUpper {
-  border: var(--ContantOut-Border);
-  border-radius: var(--ContantOut-BorderRadius);
-  background-color: var(--AllUniversal-Color);
-}
 .OutPutContant {
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 1vh 1vw 1vh 1vw;
+  padding: var(--DeepContantDeep-Padding);
 }
 .OutPutContant p {
   font-size: clamp(0.7rem, 1.5vw, 2rem);
 }
 .MainOutput {
-  padding: 1vh 1vw 1vh 1vw;
+  padding: var(--DeepContantDeep-Padding);
   display: flex;
   flex-direction: row;
 }
-#BoxOne {
+#MainOutput-BoxOne {
   background-color: red;
 }
-#BoxTwo {
+#MainOutput-BoxTwo {
   background-color: gold;
 }
-#BoxThree {
+#MainOutput-BoxThree {
   background-color: green;
 }
