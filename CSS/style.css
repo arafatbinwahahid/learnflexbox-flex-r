@@ -93,9 +93,6 @@ img[src="./SVG/3dot icon header.svg"] {
 img[src="./SVG/apple display cross icon three.svg"] {
   height: var(--AppleThreeDotCrossImage-Heightwidth);
 }
-img[src="./SVG/Flexbox Architecture.svg"] {
-  height: 20%;
-}
 .HeaderContainerOne :first-child {
   display: flex;
   flex-direction: row;
@@ -202,6 +199,7 @@ header section a {
 }
 .SectionTwoPart-One {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 #SectionTwoPart-One-Font {
@@ -246,7 +244,6 @@ header section a {
   text-align: center;
   font-size: var(--DeepContant-FontSize);
   height: var(--DeepContant-Height);
-  /* width: var(--DeepContant-Width); */
   border: var(--DeepContant-Border);
   border-radius: var(--DeepContant-BorderRadius);
   background-color: var(--AllUniversal-Color);
@@ -306,4 +303,63 @@ header section a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.Sectionseven {
+  padding: var(--ContantOut-PaddiingOut);
+}
+.OutpuMain {
+  border: var(--ContantOut-Border);
+  border-radius: var(--ContantOut-BorderRadius);
+  background-color: var(--AllUniversal-Color);
+  padding: 2vh 5vw 2vh 5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+.OutputParant {
+  border: var(--ContantOut-Border);
+  border-radius: var(--ContantOut-BorderRadius);
+  background-color: var(--AllUniversal-Color);
+  padding: 1vh 1vw 1vh 1vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1vh;
+}
+.OutputChildern {
+  width: 34vw;
+  border: var(--ContantOut-Border);
+  border-radius: var(--ContantOut-BorderRadius);
+  background-color: var(--AllUniversal-Color);
+  padding: 1vh 1.5vw 1vh 1vw;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.OutputUpper {
+  border: var(--ContantOut-Border);
+  border-radius: var(--ContantOut-BorderRadius);
+  background-color: var(--AllUniversal-Color);
+}
+.OutPutContant {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1vh 1vw 1vh 1vw;
+}
+.OutPutContant p {
+  font-size: clamp(0.7rem, 1.5vw, 2rem);
+}
+.MainOutput {
+  padding: 1vh 1vw 1vh 1vw;
+  display: flex;
+  flex-direction: row;
+}
+#BoxOne {
+  background-color: red;
+}
+#BoxTwo {
+  background-color: gold;
+}
+#BoxThree {
+  background-color: green;
 }
