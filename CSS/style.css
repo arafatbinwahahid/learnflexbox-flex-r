@@ -318,9 +318,13 @@ header section a {
 /*  Output View Template */
 /*  */
 .DeepDeepHeader-SingleLine {
+  height: var(--DeepContant-Height);
   border: var(--DeepContant-Border);
   border-radius: var(--DeepContant-BorderRadius);
   background-color: var(--AllUniversal-Color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .OutputParant {
   border: var(--DeepContant-Border);
@@ -336,18 +340,16 @@ header section a {
   border: var(--DeepContant-Border);
   border-radius: var(--DeepContant-BorderRadius);
   background-color: var(--AllUniversal-Color);
-  padding: 1vh 1.5vw 1vh 1vw;
+  padding: var(--DeepContantDeep-Padding);
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 .OutPutContant {
-  flex-direction: column;
-  align-items: flex-start;
   padding: var(--DeepContantDeep-Padding);
 }
 .OutPutContant p {
-  font-size: clamp(0.7rem, 1.5vw, 2rem);
+  font-size: var(--DeepContant-FontSize);
 }
 .MainOutput {
   padding: var(--DeepContantDeep-Padding);
@@ -362,4 +364,20 @@ header section a {
 }
 #MainOutput-BoxThree {
   background-color: green;
+}
+#DisplayFlexDesign code {
+  width: 45vw;
+  font-size: var(--HeaTwo-FontSize);
+  border: var(--DeepContant-Border);
+  border-radius: var(--DeepContant-BorderRadius);
+  background-color: var(--AllUniversal-Color);
+  padding: var(--DeepContantDeep-Padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#DisplayFlexDesign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
